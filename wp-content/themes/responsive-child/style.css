@@ -1,0 +1,25 @@
+
+
+/*
+Theme Name: Responsive Child
+Theme URI: http://cyberchimps.com/responsive-theme/
+Description: Responsive Child
+
+Author: Jeffrey Fulton
+Author URI: http://jeffreyfulton.ca
+Template: responsive
+Tags: responsive
+
+Text Domain: responsive-child
+*/
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+.featured-title {
+	color: red;
+}
+
+.featured-subtitle {
+	color: green;
+}
