@@ -13,6 +13,11 @@ Tags: responsive
 Text Domain: fashionation
 */
 
+header#masthead {
+	background-color: lightblue;
+}
+
+
 h1 {
 	color: purple;
 }
