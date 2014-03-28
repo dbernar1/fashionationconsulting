@@ -13,15 +13,60 @@ Tags: responsive
 Text Domain: fashionation
 */
 
-header#masthead {
-	background-color: lightblue;
+body {
+	/* Move this to functions.php */
+	background: url('images/background.png') no-repeat;
+	background-position: center top;
+	background-size: cover;
 }
 
-#site-top-navigation {
+header#masthead {
 	
 }
 
+.navbar {
+	border: none;
+}
+.navbar-default {
+	background-color: transparent;
+}
 
-h1 {
-	color: purple;
+section {
+
+}
+
+.section_heading {
+	color: darkviolet;
+}
+
+.section_content {
+	color: #555;
+}
+
+img#woman_silhouette{
+	position: absolute;
+	/*left: 0px;*/
+	width: 300px;
+
+}
+
+footer {
+
+	color:#ccc;
+
+	background: rgb(52, 51, 57);
+	background: -moz-linear-gradient(90deg, rgb(52, 51, 57) 10%, rgb(100, 109, 114) 90%);
+	background: -webkit-linear-gradient(90deg, rgb(52, 51, 57) 10%, rgb(100, 109, 114) 90%);
+	background: -o-linear-gradient(90deg, rgb(52, 51, 57) 10%, rgb(100, 109, 114) 90%);
+	background: -ms-linear-gradient(90deg, rgb(52, 51, 57) 10%, rgb(100, 109, 114) 90%);
+	background: linear-gradient(180deg, rgb(52, 51, 57) 10%, rgb(100, 109, 114) 90%);
+
+}
+
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+  /* Retina-specific stuff here */
+	body {
+	    /*background: url('images/background@2x.png') no-repeat;*/
+	}
 }

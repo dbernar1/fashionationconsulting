@@ -13,7 +13,7 @@
 </head>
 <body>
 <?php get_header(); ?>
-<div id="page">
+<div id="page" class="container">
 <header id="masthead">
 	
 
@@ -39,7 +39,7 @@
 				    </div>
 				<?php else : ?>
 			    <hgroup>
-		        <h1 class='site-title'><a class="navbar-brand" href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
+		        <h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
 		        <h2 class='site-description'><?php bloginfo( 'description' ); ?></h2>
 			    </hgroup>
 				<?php endif; ?>
@@ -59,17 +59,53 @@
 
 <?php while (have_posts()) : the_post(); ?>
 
-	<p><?php the_field('home_page_section_1'); ?></p>
+	<div class="row">
+		<div class='col-sm-7 col-sm-offset-5'>
+			<h1 class="section_heading"><?php the_field('section_1_heading') ?></h1>
+			<p class="section_content"><?php the_field('section_1_content'); ?></p>
+		</div>
+	</div>
 
+	<div class="row">
+		<div class='col-sm-7 col-sm-offset-5'>
+			<h1 class="section_heading"><?php the_field('section_2_heading') ?></h1>
+			<p class="section_content"><?php the_field('section_2_content'); ?></p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class='col-sm-7 col-sm-offset-5'>
+			<h1 class="section_heading"><?php the_field('section_3_heading') ?></h1>
+			<p class="section_content"><?php the_field('section_3_content'); ?></p>
+		</div>
+	</div>
 
 <?php endwhile; ?>
 
 
 <?php get_footer(); ?>
-
-<h1>Footer</h1>
-
 </div> <!-- #page -->
+
+<footer>
+
+	<img id="woman_silhouette" src="<?php bloginfo('template_directory') ?>/images/woman_silhouette.png" />
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-7 col-sm-offset-5">
+				<h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
+				<h2>Laurie Gydé</h2>
+				<p>
+					<span>Certified Fashion Consultant</span><br/>
+					<span>P. 204-254-1489</span><br/>
+					<span>E. lgyde@mymts.net</span>
+				</p>
+			</div>
+		</div>
+	</div>
+
+</footer>
+
 <?php wp_footer(); ?>
 </body>
 </html>
