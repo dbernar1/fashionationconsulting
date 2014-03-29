@@ -6,7 +6,8 @@
 	<title><?php echo get_bloginfo('name'); ?><?php wp_title( '|', true, 'right' ); ?></title>
 <?php wp_head(); ?>
 </head>
-<body>
+<body data-stellar-background-ratio="0.1" >
+<!-- <body> -->
 <?php get_header(); ?>
 <div id="page" class="container">
 <header id="masthead">
@@ -81,13 +82,15 @@
 <?php get_footer(); ?>
 </div> <!-- #page -->
 
+<!-- <footer data-stellar-ratio="0.5"> -->
 <footer>
-
-	<img id="woman_silhouette" src="<?php bloginfo('template_directory') ?>/images/woman_silhouette.png" />
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-7 col-sm-offset-5">
+			<div class="col-sm-5 test">
+				<img id="woman_silhouette" src="<?php bloginfo('template_directory') ?>/images/woman_silhouette.png" />
+			</div>
+			<div class="col-sm-7">
 				<h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
 				<h2>Laurie Gydé</h2>
 				<p>
