@@ -21,7 +21,7 @@ jQuery(document).ready(function($){
 	  // Select which property is used to position elements.
 	  // Choose between 'position' or 'transform',
 	  // or write your own 'positionProperty' plugin.
-	  //positionProperty: 'position',
+	  positionProperty: 'transform',
 
 	  // Enable or disable the two types of parallax
 	  // parallaxBackgrounds: true,
@@ -34,4 +34,30 @@ jQuery(document).ready(function($){
 	  // hideElement: function($elem) { $elem.hide(); },
 	  // showElement: function($elem) { $elem.show(); }
 	});
+
+
+	function position_footer_offset() {
+		var viewport_height = $(window).height();
+		console.log("\nviewport_height: " + viewport_height);
+
+		var document_height = $(document).height();
+		console.log("document_height: " + document_height);
+
+		var difference = document_height - viewport_height;
+		console.log("difference: " + difference);
+
+		var ratio = $("footer").attr("data-stellar-ratio");
+		console.log("ratio: " + ratio);
+
+		var new_bottom = Math.ceil(difference * ratio) * -1;
+		console.log("new_bottom: " + new_bottom);
+
+		$("footer").css("bottom", new_bottom + "px");
+
+	}
+
+	window.addEventListener('resize', position_footer_offset, false);
+	position_footer_offset();
+
+
 });

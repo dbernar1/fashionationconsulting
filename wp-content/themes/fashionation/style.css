@@ -19,6 +19,8 @@ body {
 	background-position: center top;
 	background-size: cover;
 	background-attachment: fixed;
+
+	
 }
 
 header#masthead {
@@ -42,6 +44,7 @@ section {
 
 .section_content {
 	color: #555;
+	font-size: 18px;
 }
 
 .test {
@@ -69,11 +72,12 @@ footer {
 	background: -ms-linear-gradient(90deg, rgb(52, 51, 57) 10%, rgb(100, 109, 114) 90%);
 	background: linear-gradient(180deg, rgb(52, 51, 57) 10%, rgb(100, 109, 114) 90%);
 
+	border-top: 3px solid #bbb;
+
 	position: fixed;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-
 }
 
 

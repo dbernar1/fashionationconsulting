@@ -82,12 +82,12 @@
 <?php get_footer(); ?>
 </div> <!-- #page -->
 
-<!-- <footer data-stellar-ratio="0.5"> -->
-<footer>
+<footer data-stellar-ratio="0.5">
+<!-- <footer> -->
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-5 test">
+			<div class="col-sm-5">
 				<img id="woman_silhouette" src="<?php bloginfo('template_directory') ?>/images/woman_silhouette.png" />
 			</div>
 			<div class="col-sm-7">
