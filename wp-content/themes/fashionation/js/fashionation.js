@@ -37,6 +37,12 @@ jQuery(document).ready(function($){
 
 
 	function position_footer_offset() {
+		
+		var margin_bottom = $("footer").height();
+		console.log("margin_bottom: " + margin_bottom);
+
+		$("#background_image_1").css("margin-bottom", margin_bottom + "px");
+
 		var viewport_height = $(window).height();
 		console.log("\nviewport_height: " + viewport_height);
 
@@ -52,8 +58,9 @@ jQuery(document).ready(function($){
 		var new_bottom = Math.ceil(difference * ratio) * -1;
 		console.log("new_bottom: " + new_bottom);
 
-		$("footer").css("bottom", new_bottom + "px");
+		
 
+		$("footer").css("bottom", new_bottom + "px");
 	}
 
 	window.addEventListener('resize', position_footer_offset, false);

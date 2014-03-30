@@ -6,7 +6,9 @@
 	<title><?php echo get_bloginfo('name'); ?><?php wp_title( '|', true, 'right' ); ?></title>
 <?php wp_head(); ?>
 </head>
-<body data-stellar-background-ratio="0.1" >
+<body>
+<div id="background_image_1" data-stellar-background-ratio="0.1">
+<div id="background_image_2" data-stellar-background-ratio="0.2"></div>
 <!-- <body> -->
 <?php get_header(); ?>
 <div id="page" class="container">
@@ -82,7 +84,9 @@
 <?php get_footer(); ?>
 </div> <!-- #page -->
 
-<footer data-stellar-ratio="0.5">
+</div> <!-- #background_image_1 -->
+
+<footer data-stellar-ratio="0.3">
 <!-- <footer> -->
 
 	<div class="container">

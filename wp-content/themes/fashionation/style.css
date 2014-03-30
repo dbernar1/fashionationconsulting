@@ -13,14 +13,26 @@ Tags: responsive
 Text Domain: fashionation
 */
 
-body {
+#background_image_1 {
 	/* Move this to functions.php */
-	background: url('images/background.png') no-repeat;
+	background: url('images/background_image_1.png') no-repeat;
 	background-position: center top;
 	background-size: cover;
 	background-attachment: fixed;
 
+	padding-bottom: 20px;
+	position: relative;
 	
+}
+
+#background_image_2 {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url('images/background_image_2.png') no-repeat;
+	background-position: center top;
+	background-size: cover;
+	background-attachment: fixed; 
 }
 
 header#masthead {
@@ -55,9 +67,9 @@ img#woman_silhouette{
 	/*position: absolute;*/
 	/*left: -60px;*/
 	float: right;
-	margin-top: -600px;
+	margin-top: -680px;
 	margin-right: 30%;
-	width: 340px;
+	width: 380px;
 
 }
 
