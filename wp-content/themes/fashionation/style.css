@@ -11,6 +11,27 @@ Tags: responsive
 Text Domain: fashionation
 */
 
+@font-face {
+	font-family: fashionation_andale_mono;
+	src: url('fonts/andale_mono.ttf');
+}
+
+@font-face{
+	font-family: fashionation_didot_bold;
+	src: url('fonts/didot_bold.ttf');
+}
+
+@font-face{
+	font-family: fashionation_futura_medium_italic;
+	src:url('fonts/futura_medium_italic.ttf');
+}
+
+@font-face{
+	font-family: fashionation_futura_medium;
+	src:url('fonts/futura_medium.ttf');
+}
+
+
 #background_distant{
 	/* Move this to functions.php */
 	background: url('images/background_distant.png') no-repeat;
@@ -39,17 +60,50 @@ Text Domain: fashionation
 	background-color: transparent;
 }
 
+.navbar-header {
+	width: 100%;
+	text-align: center;
+}
+
+.navbar-nav {
+	width: 400px;
+	float: none;
+	margin: 0px auto;
+}
+
+.navbar-nav > li {
+	float: none;
+
+	font-family: fashionation_futura_medium;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.site-title {
+	font-family: fashionation_didot_bold;
+	font-size: 92px;
+	color: #ff2952;
+	line-height: 100%;	
+}
+.site-title a {
+	text-decoration: none;
+	color: #ff2952;
+}
+
 .section_heading {
-	color: darkviolet;
+	font-family: fashionation_futura_medium_italic;
+	font-size: 30px;
+	text-transform: uppercase; 
+	color: #ff2952;
 }
 
 .section_content {
-	color: #555;
+	color: #444;
 	font-size: 18px;
 }
 
 #page {
-	padding-top: 160px;
+	/*padding-top: 200px;*/
 }
 
 img#woman_silhouette{
@@ -60,14 +114,16 @@ img#woman_silhouette{
 }
 
 header {
-	background: rgba(224, 232, 238, .7);
+	/*background: rgba(224, 232, 238, .7);*/
 
 	/*border-bottom: 3px solid #bbb;*/
 
-	position: fixed;
+	/*position: fixed;
 	top: 0px;
 	left: 0px;
-	right: 0px;
+	right: 0px;*/
+
+	position: relative;
 
 	z-index: 100;
 }
@@ -89,6 +145,10 @@ footer {
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
+}
+
+footer .site-title {
+	font-size: 62px;
 }
 
 

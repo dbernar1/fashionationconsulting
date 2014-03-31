@@ -13,7 +13,7 @@
 <!-- <body> -->
 <?php get_header(); ?>
 
-<header data-stellar-ratio="0.4">
+<header>
 	<div class="container">
 		<nav id="site-top-navigation" class="navbar navbar-default" role="navigation">
 		  <div class="container-fluid">
@@ -37,7 +37,11 @@
 					    </div>
 					<?php else : ?>
 				    <hgroup>
-			        <h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
+			        <h1 class='site-title'>
+			        	<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'>
+			        		<?php strtoupper( bloginfo( 'name' ) ); ?>
+			        	</a>
+			        </h1>
 			        <h2 class='site-description'><?php bloginfo( 'description' ); ?></h2>
 				    </hgroup>
 					<?php endif; ?>
@@ -45,7 +49,7 @@
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav navbar-right">
+		      <ul class="nav navbar-nav nav-justified">
 		        <li><a href="#">Home</a></li>
 		        <li><a href="#">About</a></li>
 		        <li><a href="#">Contact</a></li>
@@ -62,7 +66,7 @@
 
 	<div class="row">
 		<div class='col-sm-7 col-sm-offset-5'>
-			<h1 class="section_heading"><?php the_field('section_1_heading') ?></h1>
+			<h1 class="section_heading"><?php the_field('section_1_heading'); ?></h1>
 			<p class="section_content"><?php the_field('section_1_content'); ?></p>
 		</div>
 	</div>
