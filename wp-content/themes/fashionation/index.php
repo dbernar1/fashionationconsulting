@@ -50,9 +50,9 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav nav-justified">
-		        <li><a href="#">Home</a></li>
-		        <li><a href="#">About</a></li>
-		        <li><a href="#">Contact</a></li>
+		        <li><a href="#one">Home</a></li>
+		        <li><a href="#two">About</a></li>
+		        <li><a href="#three">Contact</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -66,21 +66,21 @@
 
 	<div class="row">
 		<div class='col-sm-7 col-sm-offset-5'>
-			<h1 class="section_heading"><?php the_field('section_1_heading'); ?></h1>
+			<h1 id="one" class="section_heading"><?php the_field('section_1_heading'); ?></h1>
 			<p class="section_content"><?php the_field('section_1_content'); ?></p>
 		</div>
 	</div>
 
 	<div class="row">
 		<div class='col-sm-7 col-sm-offset-5'>
-			<h1 class="section_heading"><?php the_field('section_2_heading') ?></h1>
+			<h1 id="two" class="section_heading"><?php the_field('section_2_heading') ?></h1>
 			<p class="section_content"><?php the_field('section_2_content'); ?></p>
 		</div>
 	</div>
 
 	<div class="row">
 		<div class='col-sm-7 col-sm-offset-5'>
-			<h1 class="section_heading"><?php the_field('section_3_heading') ?></h1>
+			<h1 id="three" class="section_heading"><?php the_field('section_3_heading') ?></h1>
 			<p class="section_content"><?php the_field('section_3_content'); ?></p>
 		</div>
 	</div>
