@@ -1,5 +1,6 @@
 jQuery(document).ready(function($){
-	console.log('inside fashionation.js');
+
+	$('body').css('visibility', 'hidden');
 
 	$.stellar({
 	  // Set scrolling to be in either one or both directions
@@ -16,7 +17,7 @@ jQuery(document).ready(function($){
 	  // Select which property is used to calculate scroll.
 	  // Choose 'scroll', 'position', 'margin' or 'transform',
 	  // or write your own 'scrollProperty' plugin.
-	  //scrollProperty: 'scroll',
+	  scrollProperty: 'scroll',
 
 	  // Select which property is used to position elements.
 	  // Choose between 'position' or 'transform',
@@ -25,7 +26,7 @@ jQuery(document).ready(function($){
 
 	  // Enable or disable the two types of parallax
 	  // parallaxBackgrounds: true,
-	  //parallaxElements: true,
+	  // parallaxElements: true,
 
 	  // Hide parallax elements that move outside the viewport
 	  hideDistantElements: false,
@@ -35,16 +36,17 @@ jQuery(document).ready(function($){
 	  // showElement: function($elem) { $elem.show(); }
 	});
 
-
 	function position_footer_offset() {
 		
+		console.log("\n");
+
 		var margin_bottom = $("footer").height();
 		console.log("margin_bottom: " + margin_bottom);
 
-		$("#background_image_1").css("margin-bottom", margin_bottom + "px");
+		$("#background_distant").css("margin-bottom", margin_bottom + "px");
 
 		var viewport_height = $(window).height();
-		console.log("\nviewport_height: " + viewport_height);
+		console.log("viewport_height: " + viewport_height);
 
 		var document_height = $(document).height();
 		console.log("document_height: " + document_height);
@@ -58,13 +60,14 @@ jQuery(document).ready(function($){
 		var new_bottom = Math.ceil(difference * ratio) * -1;
 		console.log("new_bottom: " + new_bottom);
 
-		
-
 		$("footer").css("bottom", new_bottom + "px");
 	}
 
 	window.addEventListener('resize', position_footer_offset, false);
-	position_footer_offset();
-
+	window.setTimeout(function(){ 
+		position_footer_offset();
+		console.log('timer done');
+		$('body').css("visibility", "visible").hide().fadeIn('slow');
+	}, 300);
 
 });

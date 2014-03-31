@@ -7,8 +7,9 @@
 <?php wp_head(); ?>
 </head>
 <body>
-<div id="background_image_1" data-stellar-background-ratio="0.1">
-<div id="background_image_2" data-stellar-background-ratio="0.2"></div>
+
+<div id="background_distant" data-stellar-background-ratio="0.1">
+<div id="background_near" data-stellar-background-ratio="0.2"></div>
 <!-- <body> -->
 <?php get_header(); ?>
 <div id="page" class="container">
@@ -84,7 +85,7 @@
 <?php get_footer(); ?>
 </div> <!-- #page -->
 
-</div> <!-- #background_image_1 -->
+</div> <!-- #background_distant-->
 
 <footer data-stellar-ratio="0.3">
 <!-- <footer> -->

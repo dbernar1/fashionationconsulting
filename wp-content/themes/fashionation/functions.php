@@ -43,7 +43,7 @@ function fashionation_customize_css()
 {
     ?>
          <style type="text/css">
-             html { background:<?php echo get_theme_mod('fashionation_background_color'); ?>; }
+             body { background:<?php echo get_theme_mod('fashionation_background_color'); ?>; }
          </style>
     <?php
 }
