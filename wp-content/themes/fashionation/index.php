@@ -12,49 +12,51 @@
 <div id="background_near" data-stellar-background-ratio="0.2"></div>
 <!-- <body> -->
 <?php get_header(); ?>
-<div id="page" class="container">
-<header id="masthead">
-	
 
-	<nav id="site-top-navigation" class="navbar navbar-default" role="navigation">
-	  <div class="container-fluid">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <?php if ( get_theme_mod( 'fashionation_logo' ) ) : ?>
-				    <div class='site-logo'>
-			        <a class="navbar-brand"
-			        	 href='<?php echo esc_url( home_url( '/' ) ); ?>' 
-				    	   title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' 
-			       	   rel='home'>
-				        <img src='<?php echo esc_url( get_theme_mod( 'fashionation_logo' ) ); ?>' 
-					      		 alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
-						 	</a>
-				    </div>
-				<?php else : ?>
-			    <hgroup>
-		        <h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
-		        <h2 class='site-description'><?php bloginfo( 'description' ); ?></h2>
-			    </hgroup>
-				<?php endif; ?>
-	    </div>
+<header data-stellar-ratio="0.4">
+	<div class="container">
+		<nav id="site-top-navigation" class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <?php if ( get_theme_mod( 'fashionation_logo' ) ) : ?>
+					    <div class='site-logo'>
+				        <a class="navbar-brand"
+				        	 href='<?php echo esc_url( home_url( '/' ) ); ?>' 
+					    	   title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' 
+				       	   rel='home'>
+					        <img src='<?php echo esc_url( get_theme_mod( 'fashionation_logo' ) ); ?>' 
+						      		 alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+							 	</a>
+					    </div>
+					<?php else : ?>
+				    <hgroup>
+			        <h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
+			        <h2 class='site-description'><?php bloginfo( 'description' ); ?></h2>
+				    </hgroup>
+					<?php endif; ?>
+		    </div>
 
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">Home</a></li>
-	        <li><a href="#">About</a></li>
-	        <li><a href="#">Contact</a></li>
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">Home</a></li>
+		        <li><a href="#">About</a></li>
+		        <li><a href="#">Contact</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</div>	
 </header> <!-- #masthead -->
+
+<div id="page" class="container">
 
 <?php while (have_posts()) : the_post(); ?>
 
