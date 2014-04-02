@@ -2,7 +2,7 @@
 
 function fashionation_theme_customizer( $wp_customize ) {
   //Remove sections
-  $wp_customize->remove_section( 'static_front_page' );
+  //$wp_customize->remove_section( 'static_front_page' );
 
   //Contact info
   $wp_customize->add_section( 'fashionation_contact_info_section' , array(
@@ -70,4 +70,18 @@ function fashionation_register_and_enqueue_styles_and_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'fashionation_register_and_enqueue_styles_and_scripts' );
 
+
+function register_pages_menu() {
+  register_nav_menu('pages-menu',__( 'Pages Menu', 'fashionation' ));
+}
+add_action( 'init', 'register_pages_menu' );
+
+
+
+
+
 ?>
+
+
+
+

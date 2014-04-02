@@ -4,7 +4,7 @@
 
 	<div class="row">
 		<div class='col-sm-12'>
-			<h1>index.php</h1>
+			<h1>page.php</h1>
 		</div>
 	</div>
 
