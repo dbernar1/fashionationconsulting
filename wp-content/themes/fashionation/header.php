@@ -3,7 +3,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
-	<title><?php echo get_bloginfo('name'); ?><?php wp_title( '|', true, 'right' ); ?></title>
+	<title><?php wp_title( '~', true, 'right' ); ?><?php echo get_bloginfo('name'); ?></title>
 <?php wp_head(); ?>
 </head>
 <body>
@@ -46,25 +46,21 @@
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav nav-justified">
-		      	<?php wp_nav_menu( array(
-		      		'theme_location'	=> 'pages-menu',
-						  'depth'       		=> 0,
-							'sort_column' 		=> 'menu_order',
-							'container'				=> 'div',
-							'container_class' => 'collapse navbar-collapse',
-							'container_id'		=> 'bs-example-navbar-collapse-1',
-							'menu_class'  		=> 'nav navbar-nav nav-justified',
-							'include'     		=> '',
-							'exclude'     		=> '',
-							'echo'        		=> true,
-							'show_home'   		=> false,
-							'link_before' 		=> '',
-							'link_after'  		=> '' ) );
-						?> 
-		      </ul>
-		    </div><!-- /.navbar-collapse -->
+      	<?php wp_nav_menu( array(
+      		'theme_location'	=> 'pages-menu',
+				  'depth'       		=> 0,
+					'sort_column' 		=> 'menu_order',
+					'container'				=> 'div',
+					'container_class' => 'collapse navbar-collapse',
+					'container_id'		=> 'bs-example-navbar-collapse-1',
+					'menu_class'  		=> 'nav navbar-nav nav-justified',
+					'include'     		=> '',
+					'exclude'     		=> '',
+					'echo'        		=> true,
+					'show_home'   		=> false,
+					'link_before' 		=> '',
+					'link_after'  		=> '' ) );
+				?> 
 		  </div><!-- /.container-fluid -->
 		</nav>
 	</div>	
