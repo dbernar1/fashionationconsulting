@@ -1,39 +1,43 @@
 <?php
 
 function fashionation_theme_customizer( $wp_customize ) {
-  // Fun code will go here
+  //Remove sections
+  $wp_customize->remove_section( 'static_front_page' );
 
-	//Logo
-	$wp_customize->add_section( 'fashionation_logo_section' , array(
-    'title'       => __( 'Logo', 'fashionation' ),
-    'priority'    => 30,
-    'description' => 'Upload a logo to replace the default site name and description in the header',
+  //Contact info
+  $wp_customize->add_section( 'fashionation_contact_info_section' , array(
+    'title'       => __( 'Contact Info', 'fashionation' ),
+    'priority'    => 40,
+    'description' => 'Enter contact information to display in footer.',
   ));
 
-  $wp_customize->add_setting( 'fashionation_logo' );
+  $wp_customize->add_setting('fashionation_first_name');
+  $wp_customize->add_setting('fashionation_last_name');
+  $wp_customize->add_setting('fashionation_phone');
+  $wp_customize->add_setting('fashionation_email');
 
-  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'fashionation_logo', array(
-    'label'    => __( 'Logo', 'fashionation' ),
-    'section'  => 'fashionation_logo_section',
-    'settings' => 'fashionation_logo',
-	)));
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'fashionation_first_name', array(
+    'label' => __('First name', 'fashionation' ),
+    'section' => 'fashionation_contact_info_section',
+    'settings' => 'fashionation_first_name'
+  )));
 
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'fashionation_last_name', array(
+    'label' => __('Last name', 'fashionation' ),
+    'section' => 'fashionation_contact_info_section',
+    'settings' => 'fashionation_last_name'
+  )));
 
-  //Background color
-  $wp_customize->add_section( 'fashionation_colors_section' , array(
-    'title'       => __( 'Colors', 'fashionation' ),
-    'priority'    => 30,
-    'description' => 'Select colors',
-  ));
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'fashionation_phone', array(
+    'label' => __('Phone', 'fashionation' ),
+    'section' => 'fashionation_contact_info_section',
+    'settings' => 'fashionation_phone'
+  )));
 
-  $wp_customize->add_setting('fashionation_background_color', array(
-  	'default' => '#fff',
-  ));
-
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'fashionation_background_color', array(
-  	'label' => __('Background Color', 'fashionation' ),
-  	'section' => 'fashionation_colors_section',
-  	'settings' => 'fashionation_background_color',
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'fashionation_email', array(
+    'label' => __('Email', 'fashionation' ),
+    'section' => 'fashionation_contact_info_section',
+    'settings' => 'fashionation_email'
   )));
 
 }

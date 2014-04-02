@@ -82,6 +82,7 @@ Text Domain: fashionation
 .site-title {
 	font-family: fashionation_didot_bold;
 	font-size: 92px;
+	text-transform: uppercase; 
 	color: #ff2952;
 	line-height: 100%;	
 }

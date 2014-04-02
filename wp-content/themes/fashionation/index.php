@@ -39,7 +39,7 @@
 				    <hgroup>
 			        <h1 class='site-title'>
 			        	<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'>
-			        		<?php strtoupper( bloginfo( 'name' ) ); ?>
+			        		<?php bloginfo( 'name' ); ?>
 			        	</a>
 			        </h1>
 			        <h2 class='site-description'>~ <?php bloginfo( 'description' ); ?> ~</h2>
@@ -103,11 +103,11 @@
 			</div>
 			<div class="col-sm-7">
 				<h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
-				<h2>Laurie Gydé</h2>
+				<h2><?php echo get_theme_mod('fashionation_first_name'); ?> <?php echo get_theme_mod('fashionation_last_name'); ?></h2>
 				<p>
-					<span>Certified Fashion Consultant</span><br/>
-					<span>P. 204-254-1489</span><br/>
-					<span>E. lgyde@mymts.net</span>
+					<span><?php bloginfo( 'description' ); ?></span><br/>
+					<span>P. <?php echo get_theme_mod('fashionation_phone'); ?></span><br/>
+					<span>E. <?php echo get_theme_mod('fashionation_email'); ?></span>
 				</p>
 			</div>
 		</div>
