@@ -48,6 +48,8 @@ jQuery(document).ready(function($){
 		var viewport_height = $(window).height();
 		console.log("viewport_height: " + viewport_height);
 
+		set_min_height_of_background_divs_to(viewport_height);
+
 		var document_height = $(document).height();
 		console.log("document_height: " + document_height);
 
@@ -61,6 +63,10 @@ jQuery(document).ready(function($){
 		console.log("new_bottom: " + new_bottom);
 
 		$("footer").css("bottom", new_bottom + "px");
+	}
+
+	function set_min_height_of_background_divs_to($min_height){
+		$("#background_distant").css("min-height", $min_height);
 	}
 
 	window.addEventListener('resize', position_footer_offset, false);

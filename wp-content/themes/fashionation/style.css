@@ -11,11 +11,6 @@ Tags: responsive
 Text Domain: fashionation
 */
 
-@font-face {
-	font-family: fashionation_andale_mono;
-	src: url('fonts/andale_mono.ttf');
-}
-
 @font-face{
 	font-family: fashionation_didot_bold;
 	src: url('fonts/didot_bold.ttf');
@@ -31,9 +26,7 @@ Text Domain: fashionation
 	src:url('fonts/futura_medium.ttf');
 }
 
-
 #background_distant{
-	/* Move this to functions.php */
 	background: url('images/background_distant.png') no-repeat;
 	background-position: center top;
 	background-size: cover;
@@ -91,6 +84,10 @@ Text Domain: fashionation
 	color: #ff2952;
 }
 
+.site-description {
+	font-family: fashionation_futura_medium;
+}
+
 .section_heading {
 	font-family: fashionation_futura_medium_italic;
 	font-size: 30px;
@@ -100,7 +97,7 @@ Text Domain: fashionation
 
 .section_content {
 	font-size: 20px;
-	color: #333;
+	color: #444;
 }
 
 #page {
@@ -145,35 +142,32 @@ footer .site-title {
 	font-size: 62px;
 }
 
-.product-container {
-	background: rgba(0,0,0,0.4);
-	border-radius: 3px;
-	padding: 8px;
-	margin-bottom: 30px;
-}
-
-.product-container > img {
-	/*border-top-left-radius: 4px;
-	border-top-right-radius: 4px;*/
-}
-
-.product-container > h1 {
-	margin-top: 4px;
+footer .name {
 	margin-bottom: 2px;
-
-	font-family: fashionation_futura_medium_italic;
-	font-size: 26px;
-	color: #fff;
-	text-transform: uppercase;
-	text-align: center;
 }
 
-.product-container > div > p {
-	margin-bottom: 0px;
-
-	font-size: 18px;
+footer .name,
+footer .description, 
+footer .phone, 
+footer .email {
+	font-family: fashionation_futura_medium;
 	color: #ddd;
-
 }
 
+footer .description, 
+footer .phone, 
+footer .email {
+	font-size: 16px;
+}
+.product-container {
+	padding-top: 20px;
+}
+
+.product-container .img-thumbnail {
+	background-color: #deefff;
+}
+
+.product-container h1 {
+	margin-bottom: 2px;
+}
 

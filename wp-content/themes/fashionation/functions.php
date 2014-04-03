@@ -43,16 +43,6 @@ function fashionation_theme_customizer( $wp_customize ) {
 }
 add_action('customize_register', 'fashionation_theme_customizer');
 
-function fashionation_customize_css()
-{
-    ?>
-         <style type="text/css">
-             body { background:<?php echo get_theme_mod('fashionation_background_color'); ?>; }
-         </style>
-    <?php
-}
-add_action( 'wp_head', 'fashionation_customize_css');
-
 function fashionation_register_and_enqueue_styles_and_scripts() {
   wp_register_style( 'bootstrap_style', '//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' );
   wp_register_script( 'bootstrap_script', '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js', array('jquery') );
@@ -75,7 +65,6 @@ function register_pages_menu() {
 }
 add_action( 'init', 'register_pages_menu' );
 
-
 function removemediabuttons()
 {
   global $current_user;
@@ -86,13 +75,6 @@ function removemediabuttons()
   }
 }
 add_action('admin_head','removemediabuttons');
-
-
-// function remove_box()
-// {
-//    remove_post_type_support('post', 'editor');
-// }
-// add_action("admin_init", "remove_box");
 
 // Rename 'Posts' to 'Products'
 function fashionation_change_post_label() {
