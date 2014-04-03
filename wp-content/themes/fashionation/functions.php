@@ -84,7 +84,7 @@ function fashionation_change_post_label() {
     $submenu['edit.php'][5][0] = 'Products';
     $submenu['edit.php'][10][0] = 'Add Product';
     $submenu['edit.php'][16][0] = 'Product Tags';
-    echo '';
+    
 }
 
 function fashionation_change_post_object() {
@@ -109,7 +109,3 @@ add_action( 'admin_menu', 'fashionation_change_post_label' );
 add_action( 'init', 'fashionation_change_post_object' );
 
 ?>
-
-
-
-
