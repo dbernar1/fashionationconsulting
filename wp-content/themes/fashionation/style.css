@@ -34,6 +34,8 @@ Text Domain: fashionation
 
 	padding-bottom: 20px;
 	position: relative;
+
+	margin-bottom: 210px;
 }
 
 #background_near{
@@ -170,4 +172,17 @@ footer .email {
 .product-container h1 {
 	margin-bottom: 2px;
 }
+
+#frmCSCF {
+	background: rgba(0,0,0,.5);
+	padding: 15px;
+	border-radius: 6px;
+	color: #fff;
+}
+
+#frmCSCF label {
+	font-weight: 400;
+}
+
+
 
