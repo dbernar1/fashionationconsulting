@@ -94,17 +94,17 @@ Text Domain: fashionation
 .section_heading {
 	font-family: fashionation_futura_medium_italic;
 	font-size: 30px;
-	text-transform: uppercase; 
 	color: #ff2952;
+	text-transform: uppercase; 
 }
 
 .section_content {
-	color: #333;
 	font-size: 20px;
+	color: #333;
 }
 
 #page {
-	/*padding-top: 200px;*/
+	position: relative;
 }
 
 img#woman_silhouette{
@@ -115,14 +115,7 @@ img#woman_silhouette{
 }
 
 header {
-	/*background: rgba(224, 232, 238, .7);*/
-
-	/*border-bottom: 3px solid #bbb;*/
-
-	/*position: fixed;
-	top: 0px;
-	left: 0px;
-	right: 0px;*/
+	/*border-top: 40px solid #000;*/
 
 	position: relative;
 
@@ -152,8 +145,35 @@ footer .site-title {
 	font-size: 62px;
 }
 
+.product-container {
+	background: rgba(0,0,0,0.4);
+	border-radius: 3px;
+	padding: 8px;
+	margin-bottom: 30px;
+}
 
+.product-container > img {
+	/*border-top-left-radius: 4px;
+	border-top-right-radius: 4px;*/
+}
 
+.product-container > h1 {
+	margin-top: 4px;
+	margin-bottom: 2px;
 
+	font-family: fashionation_futura_medium_italic;
+	font-size: 26px;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.product-container > div > p {
+	margin-bottom: 0px;
+
+	font-size: 18px;
+	color: #ddd;
+
+}
 
 

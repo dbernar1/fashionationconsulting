@@ -11,27 +11,38 @@
 
 <div class="row">
 	<div class='col-sm-12'>
-		<h1><?php the_title(); ?></h1>
-		<p><?php the_content(); ?></p>
+		<h1 class="section_heading"><?php the_title(); ?></h1>
+		<div class="section_content"><?php the_content(); ?></div>
 	</div>
 </div>
 
 <?php endwhile; ?>
 
-<div class="row">
+<?php $args = array( 'post_type' => 'post' ); ?>
+<?php $loop = new WP_Query( $args ); ?>
+<?php $i = 0; while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-<?php query_posts('category_name=Products'); ?>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php if ($i % 3 == 0) : ?>
+	<!-- First product in row -->
+	<div class="row">
+<?php endif; ?>
 
 	<div class='col-sm-4'>
-		<?php $image = wp_get_attachment_image_src(get_field('product_image'), 'large' ); ?>
-		<img class="img-responsive img-thumbnail" src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('product_image')) ?>" />
-		<p><?php the_field('product_title'); ?></p>
-		<p><?php the_field('product_description'); ?></p>
+		<div class="product-container">
+			<?php $image = wp_get_attachment_image_src(get_field('product_image'), 'large' ); ?>
+			<img class="img-responsive" src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('product_image')) ?>" />
+			<h1 class="product_heading"><?php the_title(); ?></h1>
+			<div class="product_content"><?php the_content(); ?></div>
+		</div>
 	</div>
 
-<?php endwhile; endif; ?>
+<?php if ($i % 3 == 2) : ?>
+	<!-- Last product in row -->
+	</div> <!-- .row -->
+<?php endif; ?>
 
-</div> <!-- .row -->
+<?php $i++; ?>
+
+<?php endwhile; ?>
 
 <?php get_footer(); ?>

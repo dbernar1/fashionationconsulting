@@ -70,15 +70,61 @@ function fashionation_register_and_enqueue_styles_and_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'fashionation_register_and_enqueue_styles_and_scripts' );
 
-
 function register_pages_menu() {
   register_nav_menu('pages-menu',__( 'Pages Menu', 'fashionation' ));
 }
 add_action( 'init', 'register_pages_menu' );
 
 
+function removemediabuttons()
+{
+  global $current_user;
+  get_currentuserinfo();
+
+  if($current_user->user_level) {
+    remove_action( 'media_buttons', 'media_buttons' );
+  }
+}
+add_action('admin_head','removemediabuttons');
 
 
+// function remove_box()
+// {
+//    remove_post_type_support('post', 'editor');
+// }
+// add_action("admin_init", "remove_box");
+
+// Rename 'Posts' to 'Products'
+function fashionation_change_post_label() {
+    global $menu;
+    global $submenu;
+    $menu[5][0] = 'Products';
+    $submenu['edit.php'][5][0] = 'Products';
+    $submenu['edit.php'][10][0] = 'Add Product';
+    $submenu['edit.php'][16][0] = 'Product Tags';
+    echo '';
+}
+
+function fashionation_change_post_object() {
+    global $wp_post_types;
+    $labels = &$wp_post_types['post']->labels;
+    $labels->name = 'Products';
+    $labels->singular_name = 'Product';
+    $labels->add_new = 'Add Product';
+    $labels->add_new_item = 'Add Product';
+    $labels->edit_item = 'Edit Product';
+    $labels->new_item = 'Product';
+    $labels->view_item = 'View Product';
+    $labels->search_items = 'Search Products';
+    $labels->not_found = 'No Products found';
+    $labels->not_found_in_trash = 'No Products found in Trash';
+    $labels->all_items = 'All Products';
+    $labels->menu_name = 'Products';
+    $labels->name_admin_bar = 'Products';
+}
+ 
+add_action( 'admin_menu', 'fashionation_change_post_label' );
+add_action( 'init', 'fashionation_change_post_object' );
 
 ?>
 
