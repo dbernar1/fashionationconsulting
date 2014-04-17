@@ -1,6 +1,6 @@
 <?php 
 	/*
-	Template Name: Retail Page
+	Template Name: Product Page
 	*/
 ?>
 
