@@ -108,4 +108,30 @@ function fashionation_change_post_object() {
 add_action( 'admin_menu', 'fashionation_change_post_label' );
 add_action( 'init', 'fashionation_change_post_object' );
 
+function searchfilter($query) {
+  if ($query->is_search && !is_admin() ) {
+    $query->set('post_type',array('post'));
+  }
+
+  return $query;
+}
+
+add_filter('pre_get_posts','searchfilter');
+
+add_filter( 'request', 'my_request_filter' );
+function my_request_filter( $query_vars ) {
+  if( isset( $_GET['s'] ) ) {
+
+    $s = trim( $_GET['s'] );
+
+
+
+    if ( empty( $s ) ) {
+      $query_vars['s'] = " ";
+    }
+  }
+  return $query_vars;
+}
+
+
 ?>

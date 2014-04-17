@@ -8,21 +8,17 @@
 
 <div id="page" class="container">
 
-<?php while (have_posts()) : the_post(); ?>
 
 	<div class="row">
 		<div class='col-sm-7 col-sm-offset-5'>
 			<?php get_search_form(); ?>
-			<h1 class="section_heading"><?php the_title(); ?></h1>
-			<div class="section_content"><?php the_content(); ?></div>
+			<h1 class="section_heading">Products</h1>
+			<div class="section_content">Display instructions to customers for pricing and purchases. i.e. “Please contact me for pricing and purchases… “</div>
 		</div>
 	</div>
 
-<?php endwhile; ?>
 
-<?php $args = array( 'post_type' => 'post' ); ?>
-<?php $loop = new WP_Query( $args ); ?>
-<?php $i = 0; while ( $loop->have_posts() ) : $loop->the_post(); ?>
+<?php while ( have_posts() ) : the_post(); ?>
 
 	<div class="row">
 
@@ -44,6 +40,6 @@
 
 	</div> <!-- .row -->
 
-<?php $i++; endwhile; ?>
+<?php endwhile; ?>
 
 <?php get_footer(); ?>
