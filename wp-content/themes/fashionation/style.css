@@ -32,10 +32,11 @@ Text Domain: fashionation
 	background-size: cover;
 	background-attachment: fixed;
 
-	padding-bottom: 20px;
+	padding-bottom: 40px;
 	position: relative;
 
-	margin-bottom: 210px;
+	/* Only relevant when javascript disabled */
+	margin-bottom: 230px;
 }
 
 #background_near{
@@ -80,6 +81,7 @@ Text Domain: fashionation
 	text-transform: uppercase; 
 	color: #ff2952;
 	line-height: 100%;	
+	text-shadow: 1px 4px 8px rgba(0,0,0,0.2);
 }
 .site-title a {
 	text-decoration: none;
@@ -138,6 +140,8 @@ footer {
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
+
+	padding-bottom: 20px;
 }
 
 footer .site-title {
