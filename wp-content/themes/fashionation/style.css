@@ -144,6 +144,37 @@ footer {
 	padding-bottom: 20px;
 }
 
+.footer_nav_container {
+	float: left;
+	padding-top: 41px;
+}
+
+.footer_nav_ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	text-align: center; 
+}
+
+.footer_nav_ul li {
+	display: inline;
+	font-family: fashionation_futura_medium;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.footer_nav_ul li a {
+	text-decoration: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #ddd;
+}
+
+.footer_nav_ul li a:hover {
+	color: #fff;
+}
+
+
 footer .site-title {
 	font-size: 62px;
 }
