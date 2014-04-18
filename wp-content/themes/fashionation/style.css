@@ -49,9 +49,12 @@ Text Domain: fashionation
 	background-attachment: fixed; 
 }
 
+@media (min-width: 768px) {
+
 .navbar {
 	border: none;
 }
+
 .navbar-default {
 	background-color: transparent;
 }
@@ -73,6 +76,7 @@ Text Domain: fashionation
 	font-family: fashionation_futura_medium;
 	font-size: 20px;
 	text-transform: uppercase;
+}
 }
 
 #page a {
@@ -226,4 +230,65 @@ footer .email {
 
 #frmCSCF label {
 	font-weight: 400;
+}
+
+@media (max-width: 767px) {
+
+	header > .container {
+		padding: 0px;
+	}
+
+	
+
+	header div .site-title {
+		font-size: 28px;
+		margin-top: 10px;
+		margin-left: 15px;
+	}
+
+	.site-description {
+		font-size: 18px;
+		text-align: center;
+		display: none;
+	}
+
+	footer div .site-title {
+		font-size: 36px;
+	}
+
+}
+
+@media (max-width: 991px) {
+
+	#background_distant{
+		background-image: none;
+		margin-bottom: 0px;
+	}
+
+	#background_near{
+		background-image: none;
+	}
+
+	#fixed_background_for_mobile_devices{
+		background: url('images/background_full.png') no-repeat;
+		background-size: cover;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+	}
+
+	footer {
+		position: relative;
+	}
+
+	header .site-title {
+		font-size: 82px;
+	}
+
+	footer .site-title {
+		font-size: 50px;
+		text-align: center;
+	}
+
+
 }

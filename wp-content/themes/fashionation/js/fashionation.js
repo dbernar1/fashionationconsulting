@@ -1,5 +1,29 @@
 jQuery(document).ready(function($){
 
+	var ua = navigator.userAgent;
+	console.log(ua);
+
+	var isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
+	console.log(isMobileWebkit);
+
+	if (isMobileWebkit) {
+
+		$('#background_distant').css('background-image', 'none');
+		$('#background_distant').css('margin-bottom', '0px');
+		$('#background_near').css('background-image', 'none');
+
+		$('#fixed_background_for_mobile_devices').css('display', 'block');
+		$('#fixed_background_for_mobile_devices').css('background', "url('wp-content/themes/fashionation/images/background_full.png')");
+		$('#fixed_background_for_mobile_devices').css('height', '100%');
+		$('#fixed_background_for_mobile_devices').css('width', '100%');
+		$('#fixed_background_for_mobile_devices').css('position', 'fixed');
+
+		$('footer').css("position", "relative");
+
+		return;
+	}
+	
+
 	$('body').css('visibility', 'hidden');
 
 	$.stellar({
@@ -37,7 +61,7 @@ jQuery(document).ready(function($){
 	});
 
 	function position_footer_offset() {
-		
+
 		console.log("\n");
 
 		var margin_bottom = $("footer").height();

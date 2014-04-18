@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-5">
-					<img id="woman_silhouette" src="<?php bloginfo('template_directory') ?>/images/woman_silhouette.png" />
+					<img id="woman_silhouette" class="hidden-xs" src="<?php bloginfo('template_directory') ?>/images/woman_silhouette.png" />
 
 					<?php wp_nav_menu( array(
 					      		'theme_location'	=> 'pages-menu',

@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="resource-type" content="document" />
 	<meta http-equiv="content-type" content="text/html; charset=US-ASCII" />
 	<meta http-equiv="content-language" content="en-us" />
@@ -19,6 +19,7 @@
 </head>
 <body>
 
+<div id="fixed_background_for_mobile_devices"></div>
 <div id="background_distant" data-stellar-background-ratio="0.1">
 <div id="background_near" data-stellar-background-ratio="0.2"></div>
 
