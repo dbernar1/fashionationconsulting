@@ -62,7 +62,7 @@ Text Domain: fashionation
 }
 
 .navbar-nav {
-	width: 400px;
+	width: 500px;
 	float: none;
 	margin: 0px auto;
 }
@@ -73,6 +73,15 @@ Text Domain: fashionation
 	font-family: fashionation_futura_medium;
 	font-size: 20px;
 	text-transform: uppercase;
+}
+
+#page a {
+	color: #9932CC;
+}
+
+#page a:hover {
+	color: #7a27a2;
+	text-decoration: none;
 }
 
 .site-title {
@@ -218,6 +227,3 @@ footer .email {
 #frmCSCF label {
 	font-weight: 400;
 }
-
-
-
