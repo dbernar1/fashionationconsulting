@@ -1,5 +1,12 @@
 jQuery(document).ready(function($){
 
+	var ua = navigator.userAgent;
+	var isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
+
+	if (isMobileWebkit) {
+		return;
+	}
+
 	$('body').css('visibility', 'hidden');
 
 	//Fix Footer to bottom of browser window
