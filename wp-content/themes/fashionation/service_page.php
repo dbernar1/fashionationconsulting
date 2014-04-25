@@ -23,7 +23,8 @@
 
 <?php endwhile; ?>
 
-<?php $args = array( 'post_type' => 'service' ); ?>
+<?php $args = array( 'post_type' => 'service',
+										 'order' => 'ASC' ); ?>
 <?php $loop = new WP_Query( $args ); ?>
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
@@ -34,7 +35,7 @@
 					<div class="section_content">
 						<?php the_content(); ?>
 					</div>
-					<div class="section_content price_info pull-right"><?php print_custom_field('pricing_info'); ?></div>
+					<div class="section_content price_info pull-right"><strong><?php print_custom_field('pricing_info'); ?></strong></div>
 		</div>
 
 	</div> <!-- .row -->

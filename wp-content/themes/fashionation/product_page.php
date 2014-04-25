@@ -19,7 +19,8 @@
 
 <?php endwhile; ?>
 
-<?php $args = array( 'post_type' => 'post' ); ?>
+<?php $args = array( 'post_type' => 'post',
+										 'order' => 'ASC' ); ?>
 <?php $loop = new WP_Query( $args ); ?>
 <?php $i = 0; while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
