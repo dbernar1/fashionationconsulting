@@ -49,30 +49,33 @@ Text Domain: fashionation
 	background-attachment: fixed; 
 }
 
-.navbar {
-	border: none;
-}
-.navbar-default {
-	background-color: transparent;
-}
+@media (min-width: 768px) {
 
-.navbar-header {
-	width: 100%;
-	text-align: center;
-}
+	.navbar {
+		border: none;
+	}
+	.navbar-default {
+		background-color: transparent;
+	}
 
-.navbar-nav {
-	width: 500px;
-	float: none;
-	margin: 0px auto;
-}
+	.navbar-header {
+		width: 100%;
+		text-align: center;
+	}
 
-.navbar-nav > li {
-	float: none;
+	.navbar-nav {
+		width: 500px;
+		float: none;
+		margin: 0px auto;
+	}
 
-	font-family: fashionation_futura_medium;
-	font-size: 20px;
-	text-transform: uppercase;
+	.navbar-nav > li {
+		float: none;
+
+		font-family: fashionation_futura_medium;
+		font-size: 20px;
+		text-transform: uppercase;
+	}
 }
 
 #page a {
@@ -228,4 +231,38 @@ footer .email {
 	font-weight: 400;
 }
 
+@media (max-width: 767px) {
 
+	header > .container {
+		padding: 0px;
+	}
+
+	header div .site-title {
+		font-size: 28px;
+		margin-top: 10px;
+		margin-left: 15px;
+	}
+
+	.site-description {
+		font-size: 18px;
+		text-align: center;
+		display: none;
+	}
+
+	footer div .site-title {
+		font-size: 36px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+	header .site-title {
+		font-size: 82px;
+	}
+
+	footer .site-title {
+		font-size: 50px;
+		text-align: center;
+	}
+	
+}
