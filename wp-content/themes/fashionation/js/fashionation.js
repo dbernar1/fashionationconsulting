@@ -2,6 +2,12 @@ jQuery(document).ready(function($){
 
 	$('body').css('visibility', 'hidden');
 
+	//Fix Footer to bottom of browser window
+	$("footer").css("position", "fixed");
+	$("footer").css("bottom", "0px");
+	$("footer").css("left", "0px");
+	$("footer").css("right", "0px");
+
 	$.stellar({
 	  // Set scrolling to be in either one or both directions
 	  horizontalScrolling: false,
