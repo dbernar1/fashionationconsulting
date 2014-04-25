@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 	<meta name="resource-type" content="document" />
 	<meta http-equiv="content-type" content="text/html; charset=US-ASCII" />
 	<meta http-equiv="content-language" content="en-us" />
