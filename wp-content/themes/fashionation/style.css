@@ -36,7 +36,7 @@ Text Domain: fashionation
 	position: relative;
 
 	/* Only relevant when javascript disabled */
-	margin-bottom: 230px;
+	/*margin-bottom: 230px;*/
 }
 
 #background_near{
@@ -145,11 +145,11 @@ footer {
 
 	border-top: 3px solid #bbb;
 
-	position: fixed;
+/*	position: fixed;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-
+*/
 	padding-bottom: 20px;
 }
 
